@@ -1,0 +1,56 @@
+:root {
+    --text-margin: 75px;
+}
+
+h2 {
+    margin-left: var(--text-margin);
+}
+
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+#left {
+    width: max(25%, 59vh);
+    /* border: 2px black solid; */
+}
+
+#right {
+    padding-top: 50px;
+    width: 75%;
+    /* border: 2px black solid; */
+}
+
+#sign-up-card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#sign-form {
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    box-shadow: 1px 1px 7px 1px gray;
+}
+
+form {
+    padding: var(--text-margin);
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 32rem;
+    /* border: 2px black solid; */
+}
+
+label {
+    display: block;
+}
