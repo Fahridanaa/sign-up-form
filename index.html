@@ -1,58 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <title>Sign up form</title>
-</head>
-<body>
-    <div id="left">
-        <img src="assets/olena-sergienko-r0M9HrfJMBM-unsplash.jpg" alt="leaf picture">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald&display=swap"
+			rel="stylesheet" />
+		<title>Sign up form</title>
+		<script src="script.js" defer></script>
+	</head>
 
-    </div>
-    <div id="right">
-        <div id="sign-up-card">
-            <div class="header">
-                <h2>You know you need something like this in your life to help you realize your deepest dreams.
-                    <br>Sign up <i>now</i> to get started.
-   </h2>
-                <h2>You <i>know</i> you want to</h2>
-                <br>
-            </div>
-            <div id="sign-form">
-                <h2>Let's do this!</h2>
-                <form action="">
-                    <div>
-                        <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name">
-                    </div>
-                    <div>
-                        <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name">
-                    </div>
-                    <div>
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div>
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone">
-                    </div>
-                    <div>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password">
-                    </div>
-                    <div>
-                        <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_password">
-                    </div>
-            </div>
-        </div>
-    </div>
-    
-</body>
+	<body>
+		<div class="main">
+			<div id="left">
+				<div class="logo">
+					<img src="assets/logo.png" alt="logo" />
+					<h1>Back to Nature</h1>
+				</div>
+			</div>
+			<div id="right">
+				<div class="header">
+					<h2>
+						This is not a real online service!You know you need something like
+						this in your life to help you realize your deepest dreams.
+						<br />Sign up <em>now</em> to get started.
+					</h2>
+					<h2>You <em>know</em> you want to.</h2>
+					<br />
+				</div>
+				<div id="sign-form">
+					<form id="form" action="/" method="POST">
+						<div class="header">
+							<h2>Let's do this!</h2>
+						</div>
+						<div class="sign-card">
+							<div>
+								<label for="first_name">
+									*FIRST NAME <br />
+									<input type="text" id="first_name" required />
+									<div class="error" id="error-Fname"></div>
+								</label>
+							</div>
+							<div>
+								<label for="last_name"
+									>*LAST NAME <br />
+									<input type="text" id="last_name" required />
+									<div class="error" id="error-Lname"></div>
+								</label>
+							</div>
+							<div>
+								<label for="email">
+									*EMAIL <br />
+									<input type="email" id="email" required />
+									<div class="error" id="error-email"></div>
+								</label>
+							</div>
+							<div>
+								<label for="phone">
+									*PHONE NUMBER <br />
+									<input type="tel" id="phone" pattern="[0-9]{12}" required />
+									<div class="error" id="error-phone"></div>
+								</label>
+							</div>
+							<div>
+								<label for="password">
+									*PASSWORD <br />
+									<input type="password" id="password" required />
+									<div class="error" id="error-pw"></div>
+								</label>
+							</div>
+							<div>
+								<label for="confirm_password">
+									*CONFIRM PASSWORD <br />
+									<input
+										type="password"
+										id="confirm_password"
+										required
+										onchange="pwValidation" />
+									<div class="error" id="error-CPw"></div>
+								</label>
+							</div>
+						</div>
+						<div id="submit">
+							<button type="submit" id="create">Create Account</button>
+							<span>Already have an account?</span> <a href="">Log in</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

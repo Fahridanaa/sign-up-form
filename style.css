@@ -1,56 +1,142 @@
-:root {
-    --text-margin: 75px;
+@font-face {
+	font-family: font-logo;
+	src: url(fonts/Norse-Bold.otf);
 }
 
-h2 {
-    margin-left: var(--text-margin);
-}
-
+html,
 body {
-    display: flex;
-    padding: 0;
-    margin: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
 }
 
-img {
-    width: 100%;
+html body {
+	padding: 0px;
+	margin: 0px;
+}
+.main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.header {
+	margin-left: 5rem;
+	width: 60rem;
 }
 
 #left {
-    width: max(25%, 59vh);
-    /* border: 2px black solid; */
+	flex-grow: 1;
+	width: 40vw;
+	background: url(assets/olena-sergienko-r0M9HrfJMBM-unsplash.jpg);
+	background-size: cover;
+	display: flex;
+	align-items: flex-start;
+	color: white;
+}
+
+.logo {
+	width: 100%;
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(16, 54, 8, 0.527);
+	font-family: font-logo;
+	font-size: 2.4rem;
+}
+
+.logo > img {
+	width: 6rem;
+	padding: 10px;
 }
 
 #right {
-    padding-top: 50px;
-    width: 75%;
-    /* border: 2px black solid; */
-}
-
-#sign-up-card {
-    display: flex;
-    flex-direction: column;
-
+	padding-top: 50px;
+	width: 75%;
 }
 
 #sign-form {
-    display: flex;
-    margin-top: 25px;
-    flex-direction: column;
-    box-shadow: 1px 1px 7px 1px gray;
+	display: flex;
+	margin-top: 25px;
+	flex-direction: row;
+	height: 20rem;
+	box-shadow: 1px 1px 7px 1px gray;
 }
 
-form {
-    padding: var(--text-margin);
-    padding-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: space-between;
-    width: 32rem;
-    /* border: 2px black solid; */
+.sign-card {
+	margin-left: 5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	width: 41rem;
+	height: 15rem;
 }
 
 label {
-    display: block;
+	letter-spacing: 1px;
 }
+
+input {
+	border-radius: 5px;
+	margin-right: 6rem;
+	padding: 0.4rem;
+	padding-right: 2rem;
+	border: 2px solid #e5e7eb;
+}
+
+input:valid {
+	outline: none;
+	border-color: #596d48;
+	box-shadow: 1px 1px 1px 0px gray;
+}
+
+input:invalid:focus {
+	outline: none;
+	border-color: red;
+	box-shadow: 1px 1px 1px 0px gray;
+}
+
+#create {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	width: 12rem;
+	font-weight: 900;
+	color: white;
+	background-color: #596d48;
+	display: block;
+	border: none;
+	box-shadow: 0px 1px 2px 1px gray;
+}
+
+a {
+	text-decoration: none;
+	color: #596d48;
+	font-weight: 900;
+}
+
+#create:hover {
+	background-color: #2f3a26;
+}
+
+a:hover {
+	color: #151a10;
+}
+
+#submit {
+	margin-top: 3rem;
+	margin-left: 5rem;
+}
+
+.error {
+	color: red;
+}
+
+/* span {
+	font-weight: 900;
+} */
